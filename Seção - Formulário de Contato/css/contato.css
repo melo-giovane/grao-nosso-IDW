@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-container {
+    position: relative;
+    width: 400px;
+    padding: 32px 24px;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* Pseudo-elemento girando */
+.form-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg,
+            #4C2B08,
+            #AB7743,
+            #ebac34);
+    animation: rotate 4s linear infinite;
+    z-index: 0;
+}
+
+/* Máscara para cortar o fundo, criando o efeito só na borda */
+.form-container::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: #fff;
+    border-radius: 13px;
+    z-index: 1;
+}
+
+/* Para o conteúdo ficar acima de tudo */
+.form-container form {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Restante dos estilos do formulário */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #000;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 90%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid #414141;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 96px;
+}
+
+.form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.form-submit-btn {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: center;
+    font-family: sans-serif;
+    color: #4C2B08;
+    font-weight: 600;
+    width: 40%;
+    background: #4C2B08;
+    border: none;
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 14px;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.form-label {
+    font-family: sans-serif;
+    font-size: 160px;
+}
