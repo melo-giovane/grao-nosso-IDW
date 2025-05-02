@@ -9,10 +9,10 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding: 24px;
+  padding: 26px;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
 }
 
 #marca {
@@ -29,6 +29,7 @@
 
 #titulo {
   font-size: 20px;
+  font-weight: 700;
   margin-left: 17px;
   color: #4C2B08;
 ;
@@ -37,9 +38,11 @@
 #navbar ul {
   list-style: none;
   display: flex;
+  font-size: 14px;
+  font-weight: 500;
   justify-content: space-between;
   width: 250px;
-  font-size: 14px;
+  padding-left: 0;
 }
 
 #navbar ul li a{
@@ -47,18 +50,23 @@
   text-decoration: none;
   color: #000;
 }
+#navbar ul li a:hover{
+  color: #EBAC34;
+
+}
 
 #contato {
   font-size: 14px;
+  font-weight: 500;
   border: none;
   background-color: #000;
   color: #fff;
   border-radius: 4px;
-  padding: 13px 30px;
+  padding: 10px 28px 11px 28px;
 }
 
 
 .carousel-inner img{
-  height: 350px;
+  height: 400px;
   object-fit: cover;
 }
