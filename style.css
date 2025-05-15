@@ -70,3 +70,22 @@
   height: 400px;
   object-fit: cover;
 }
+
+#indicadores {
+  background-color: #AB7743;
+  color: #fff;  
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 20px 60px;
+
+}
+
+#indicadores h2{
+  line-height: 100%;
+  font-weight: 700;
+}
+
+#indicadores p{
+ font-weight: 500;
+}
