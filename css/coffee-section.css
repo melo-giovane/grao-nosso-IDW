@@ -1,0 +1,148 @@
+.coffee-section {
+  position: relative;
+  padding: 64px 0 32px 0;
+  background: #f8f5f1;
+  min-height: 400px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #4d392d;
+}
+
+.timeline-line::before,
+.timeline-line::after {
+  content: '';
+  position: absolute;
+  left: -13px;
+  width: 30px;
+  height: 30px;
+  background-color: #4d392d;
+  border-radius: 50%;
+  border: 8px solid #d2cac1;
+}
+
+.timeline-line::before {
+  top: 15%;
+}
+
+.timeline-line::after {
+  top: 80%;
+  transform: translateY(-50%);
+}
+
+.content {
+  margin-left: 15%;
+  margin-right: 10%;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.coffee-section .intro h2 {
+  font-size: 2.2rem;
+  color: #4d392d;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.coffee-section .intro .highlight {
+  color: #a67c52;
+  font-weight: 900;
+}
+
+.coffee-block {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 48px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #a67c5211;
+  padding: 32px 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.coffee-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.coffee-block img {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #a67c5211;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
+.coffee-block .text h2 {
+  font-size: 1.4rem;
+  color: #a67c52;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.coffee-block .text p {
+  color: #6c584c;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* Responsivo */
+
+/* @media (max-width: 1400px) {
+  .coffee-section .timeline-line {
+    display: none;
+  }
+} */
+
+@media (max-width: 1000px) {
+  .coffee-section .content {
+    padding-left: 5%;
+    margin-left: 0;
+    max-width: 98vw;
+  }
+  .coffee-section .timeline-line {
+    left: 40px;
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .coffee-section {
+    padding: 32px 0 16px 0;
+  }
+  .coffee-section .content {
+    padding-left: 0;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .coffee-section .timeline-line {
+    display: none;
+  }
+  .coffee-block,
+  .coffee-block.reverse {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 6vw;
+    margin-bottom: 28px;
+    width: 90%;
+    box-sizing: border-box;
+  }
+  .coffee-block img {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
+  }
+  .coffee-section .intro {
+    text-align: center;
+  }
+}

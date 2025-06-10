@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 26px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+
+#marca {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+  top: 24px;
+  left: 31px;
+}
+
+#titulo {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 17px;
+  color: #4C2B08;
+;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  justify-content: space-between;
+  width: 250px;
+  padding-left: 0;
+}
+
+#navbar ul li a{
+  font: bold;
+  text-decoration: none;
+  color: #000;
+}
+#navbar ul li a:hover{
+  color: #EBAC34;
+
+}
+
+#contato {
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px 28px 11px 28px;
+}
+
+
+.carousel-inner img{
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Indicadores responsivos */
+#indicadores {
+  background-color: #ab7743;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2.5em;
+  padding: 2em 0 2.5em 0;
+  flex-wrap: wrap;
+}
+
+.indicador {
+  background: #ab7743;
+  border-radius: 1em;
+  box-shadow: 0 2px 16px #a67c5211;
+  padding: 1.5em 2.5em;
+  min-width: 160px;
+  text-align: center;
+  margin: 0.5em 0;
+  /* flex: 1 1 180px; */
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.indicador h2 {
+  color: #fff;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 0.2em;
+}
+
+.indicador p {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  #indicadores {
+    gap: .2em;
+    /* padding: 1.2em 0 1.5em 0; */
+  }
+  .indicador {
+    padding: 1.2em 1em;
+    min-width: 120px;
+    max-width: 160px;
+  }
+  .indicador h2 {
+    font-size: 1.4rem;
+  }
+  .indicador p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #indicadores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em;
+    padding: 1em 0;
+    justify-items: center;
+    align-items: stretch;
+  }
+  .indicador {
+    width: 95%;
+    max-width: 98vw;
+    min-width: unset;
+    padding: 1em 0.5em;
+    margin: 0;
+  }
+}
+
+/* Adicione ao seu arquivo CSS principal */
+.carrossel-fixo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5em;
+  object-fit: cover;
+}
+
+/* Adicione ao seu arquivo style.css */
+.carrossel-texto-principal {
+  position: absolute;
+  top: 45%;
+  left: 7%;
+  transform: translateY(-50%);
+  color: #fff;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: clamp(1rem, 6vw, 2.5rem); /* Agora varia mais: 1rem a 2.5rem */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  box-shadow: none;
+  letter-spacing: 1px;
+  max-width: clamp(120px, 43.53vw, 350px); /* Mantém largura proporcional */
+  width: 90vw;
+  word-break: break-word;
+  line-height: 1.15;
+}
+
+.carrossel-texto-principal .destaque-cafe {
+  color: #EBAC34;
+}
+
+@media (max-width: 700px) {
+  .carrossel-texto-principal {
+    max-width: clamp(90px, 43.53vw, 350px);
+    font-size: clamp(0.9rem, 8vw, 1.5rem); /* Mais contraste em telas pequenas */
+    left: 3%;
+    top: 45%;
+    padding: 0;
+    text-align: left;
+  }
+}

@@ -1,3 +1,12 @@
+.plans-section {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3em;    /* Espaçamento superior */
+    margin-bottom: 3em; /* Espaçamento inferior */
+}
+
 .card {
     --primary: #ff3e00;
     --primary-hover: #ff6d43;
@@ -205,4 +214,38 @@
 .card-button:active {
     transform: translate(0.1em, 0.1em);
     box-shadow: 0.15em 0.15em 0 var(--shadow-color);
+}
+
+@media (max-width: 1000px) {
+  .plans-section {
+    flex-direction: column;
+    height: auto;
+    gap: 2.5em;
+    padding: 2em 0;
+  }
+  .card {
+    width: 90vw;
+    max-width: 28em;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .plans-section {
+    flex-direction: column;
+    height: auto;
+    gap: 1.5em;
+    padding: 1em 0;
+  }
+  .card {
+    width: 98vw;
+    max-width: 20em;
+    min-width: unset;
+    padding: 0.5em;
+  }
+  .card-title-area,
+  .card-body {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+  }
 }
