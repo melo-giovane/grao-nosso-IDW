@@ -1,5 +1,7 @@
 # 🌱 Grão Nosso
 
+![](https://i.imgur.com/L3xAark.gif)
+
 Site institucional desenvolvido como projeto final da disciplina **Introdução ao Desenvolvimento Web**, do curso de **Sistemas de Informação** da **Universidade do Planalto Catarinense (UNIPLAC)** – 1ª fase.
 
 ## 📌 Sobre o Projeto
